@@ -3,6 +3,6 @@ body {
     padding: 0;
     box-sizing: border-box;
     margin: 90px 0 0;
-    background-color: #FFFFFF;
+    background-color: var(--background-color);
     font-style: italic;
 }
