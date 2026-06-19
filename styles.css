@@ -8,6 +8,11 @@ body {
     font-weight: bold;
 }
 
+a {
+    color: var(--text-color);
+    font-weight: bold;
+}
+
 #container {
     display: flex;
     flex-wrap: wrap;
@@ -25,5 +30,4 @@ body {
 .comment {
     color: #80808080;
     font-style: italic;
-    text-shadow: 1px 1px 1.5px var(--comment-color);
 }
