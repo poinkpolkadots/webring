@@ -13,6 +13,20 @@ a {
     font-weight: bold;
 }
 
+p {
+    margin: 0;
+}
+
+li {
+    display: flex;
+    margin: 20px 0;
+}
+
+ul {
+    width: 100%;
+    padding: 0px 40px 0px;
+}
+
 #container {
     display: flex;
     flex-wrap: wrap;
@@ -29,5 +43,7 @@ a {
 
 .comment {
     color: #80808080;
+    text-shadow: 0 0 1px var(--text-color);
     font-style: italic;
+    margin-left: auto;
 }
