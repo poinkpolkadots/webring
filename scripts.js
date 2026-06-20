@@ -17,4 +17,32 @@ function modeToggle() {
     }
 }
 
+async function populateList() {
+    const list = document.getElementById("list");
+    const links = await fetch("/assets/text/links.txt");
+    let linksText = await links.text();
+    linksText = linksText.split("\n")
+        .map(word => word.trim());
+
+    const comments = await fetch("/assets/text/comments.txt");
+    let commentsText = await comments.text();
+    commentsText = commentsText.split("\n")
+        .map(word => word.trim());
+
+    for (let i = 0; i < linksText.length; i++) {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        const p = document.createElement("p");
+        a.setAttribute("href", linksText[i]);
+        a.innerText = linksText[i];
+        p.setAttribute("class", "comment");
+        p.innerText = commentsText[i];
+        li.appendChild(a);
+        li.appendChild(p);
+        list.appendChild(li);
+
+    }
+}
+
 toggle.addEventListener("click", modeToggle);
+document.addEventListener("DOMContentLoaded", populateList);
